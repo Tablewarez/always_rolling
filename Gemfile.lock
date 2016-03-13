@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    dice (0.0.1)
-      activesupport (~> 4.2)
+    dice-roller (0.0.2)
+      activesupport (>= 4.2)
       expression_parser (~> 0.9)
       pry (~> 0.10)
       rspec (~> 3.4)
@@ -56,7 +56,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  dice!
+  dice-roller!
 
 BUNDLED WITH
    1.11.2

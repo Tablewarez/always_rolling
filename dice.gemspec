@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'dice-roller'
-  s.version     = '0.0.2'
+  s.version     = '0.0.3'
   s.date        = '2016-03-16'
   s.summary     = "A ruby dice roller"
   s.description = "A clean way to roll complex dice structures"
@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.license     = 'MIT'
 
   s.add_dependency 'expression_parser', '~> 0.9'
-  s.add_dependency 'activesupport', '~> 4.2'
+  s.add_dependency 'activesupport', '>= 4.2'
   s.add_runtime_dependency 'pry', '~> 0.10'
   s.add_runtime_dependency 'rspec', '~> 3.4'
   s.add_runtime_dependency 'simplecov', '~> 0.11'
