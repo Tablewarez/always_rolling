@@ -32,7 +32,11 @@ class Dice
       dice_groups(str).each do |group|
         # Roll each dice
         dices, sides, modifier, modifier_amount = group.scan(/(\d+)d(\d+)(\D*)(\d*)/).flatten
-        results = Integer(dices).times.collect { rand(Integer(sides)) + 1 }.sort
+        results = Integer(dices).times.collect do
+          r = rand(Integer(sides)) + 1
+          @rolls << r
+          r
+        end.sort
 
         # If a modifier is present, handle that
         if modifier.present?
@@ -53,9 +57,7 @@ class Dice
         end
 
         # Sum dice results and reinsert the results in the original string
-        result = results.inject(0) { |sum, x| sum + x }
-        @rolls << result
-        str.gsub!(group, result.to_s)
+        str.gsub!(group, results.sum.to_s)
       end
 
       str

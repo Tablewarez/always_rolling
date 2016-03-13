@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    dice-roller (0.0.2)
+    dice-roller (0.0.4)
       activesupport (>= 4.2)
       expression_parser (~> 0.9)
       pry (~> 0.10)
