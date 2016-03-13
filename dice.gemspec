@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Emil Kampp"]
   s.email       = 'emil@kampp.me'
   s.files       = ["lib/dice.rb"]
-  s.homepage    = 'http://emil.kampp.me'
+  s.homepage    = 'https://github.com/DarkHeresyOnline/dice'
   s.license     = 'MIT'
 
   s.add_dependency 'expression_parser', '~> 0.9'
