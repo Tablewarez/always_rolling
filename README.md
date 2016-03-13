@@ -16,11 +16,13 @@ Dice.roll('1d100+5') # => 57+5 # => 62
 And you can modify the dice rolls them selves by dropping the highest dice result
 
 ```
-Dice.roll('2d100dh') # => [57, 14] # => 14
+Dice.roll('3d100dh') # => [57, 14, 88] # => [57, 14] # => 71
+Dice.roll('3d100dh2') # => [57, 14, 88] # => 14
 ```
 
 Or dropping the lowest dice result
 
 ```
-Dice.roll('2d100dl') # => [57, 14] # => 57
+Dice.roll('3d100dl') # => [57, 14, 88] # => [57, 88] # => 145
+Dice.roll('3d100dl2') # => [57, 14, 88] # => 88
 ```
