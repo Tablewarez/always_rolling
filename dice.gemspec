@@ -10,9 +10,9 @@ Gem::Specification.new do |s|
   s.homepage    = 'http://emil.kampp.me'
   s.license     = 'MIT'
 
-  s.add_dependency 'expression_parser'
-  s.add_dependency 'activesupport'
-  s.add_runtime_dependency 'pry'
-  s.add_runtime_dependency 'rspec'
-  s.add_runtime_dependency 'simplecov'
+  s.add_dependency 'expression_parser', '~> 0.9'
+  s.add_dependency 'activesupport', '~> 4.2'
+  s.add_runtime_dependency 'pry', '~> 0.10'
+  s.add_runtime_dependency 'rspec', '~> 3.4'
+  s.add_runtime_dependency 'simplecov', '~> 0.11'
 end
