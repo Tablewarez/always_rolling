@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-03-13T17:51:22+01:00">2016-03-13T17:51:22+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-03-13T17:54:29+01:00">2016-03-13T17:54:29+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         20652.72
+         20659.12
        </span>
     </span> hits/line)
   </h2>
@@ -57,7 +57,7 @@
         <td>32</td>
         <td>31</td>
         <td>1</td>
-        <td>29375.3</td>
+        <td>29384.1</td>
       </tr>
       
       <tr>
@@ -67,7 +67,7 @@
         <td>14</td>
         <td>14</td>
         <td>0</td>
-        <td>715.4</td>
+        <td>716.3</td>
       </tr>
       
     </tbody>
@@ -190,14 +190,14 @@
           <code class="ruby">  def initialize(str)</code>
         </li>
       
-        <li class="covered" data-hits="10000" data-linenumber="16">
-          <span class="hits">10000</span>
+        <li class="covered" data-hits="10003" data-linenumber="16">
+          <span class="hits">10003</span>
           
           <code class="ruby">    @raw_expression = str</code>
         </li>
       
-        <li class="covered" data-hits="10000" data-linenumber="17">
-          <span class="hits">10000</span>
+        <li class="covered" data-hits="10003" data-linenumber="17">
+          <span class="hits">10003</span>
           
           <code class="ruby">    @rolls = []</code>
         </li>
@@ -208,8 +208,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="10000" data-linenumber="19">
-          <span class="hits">10000</span>
+        <li class="covered" data-hits="10003" data-linenumber="19">
+          <span class="hits">10003</span>
           
           <code class="ruby">    @result = Integer(ExpressionParser::Parser.new.parse(parse))</code>
         </li>
@@ -244,8 +244,8 @@
           <code class="ruby">    def dice_groups(str)</code>
         </li>
       
-        <li class="covered" data-hits="10000" data-linenumber="25">
-          <span class="hits">10000</span>
+        <li class="covered" data-hits="10003" data-linenumber="25">
+          <span class="hits">10003</span>
           
           <code class="ruby">      str.scan(/\d{,3}d\d{,3}[^(\ |\+)]+/)</code>
         </li>
@@ -268,8 +268,8 @@
           <code class="ruby">    def parse</code>
         </li>
       
-        <li class="covered" data-hits="10000" data-linenumber="29">
-          <span class="hits">10000</span>
+        <li class="covered" data-hits="10003" data-linenumber="29">
+          <span class="hits">10003</span>
           
           <code class="ruby">      str = raw_expression.dup</code>
         </li>
@@ -286,8 +286,8 @@
           <code class="ruby">      # Match groups of dices, calculate the groups and reinsert them</code>
         </li>
       
-        <li class="covered" data-hits="10000" data-linenumber="32">
-          <span class="hits">10000</span>
+        <li class="covered" data-hits="10003" data-linenumber="32">
+          <span class="hits">10003</span>
           
           <code class="ruby">      dice_groups(str).each do |group|</code>
         </li>
@@ -298,14 +298,14 @@
           <code class="ruby">        # Roll each dice</code>
         </li>
       
-        <li class="covered" data-hits="60000" data-linenumber="34">
-          <span class="hits">60000</span>
+        <li class="covered" data-hits="60018" data-linenumber="34">
+          <span class="hits">60018</span>
           
           <code class="ruby">        dices, sides, modifier, modifier_amount = group.scan(/(\d+)d(\d+)(\D+)(\d*)/).flatten</code>
         </li>
       
-        <li class="covered" data-hits="240000" data-linenumber="35">
-          <span class="hits">240000</span>
+        <li class="covered" data-hits="240072" data-linenumber="35">
+          <span class="hits">240072</span>
           
           <code class="ruby">        results = Integer(dices).times.collect { rand(Integer(sides)) + 1 }.sort</code>
         </li>
@@ -322,14 +322,14 @@
           <code class="ruby">        # If a modifier is present, handle that</code>
         </li>
       
-        <li class="covered" data-hits="60000" data-linenumber="38">
-          <span class="hits">60000</span>
+        <li class="covered" data-hits="60018" data-linenumber="38">
+          <span class="hits">60018</span>
           
           <code class="ruby">        if modifier.present?</code>
         </li>
       
-        <li class="covered" data-hits="60000" data-linenumber="39">
-          <span class="hits">60000</span>
+        <li class="covered" data-hits="60018" data-linenumber="39">
+          <span class="hits">60018</span>
           
           <code class="ruby">          modifier_amount = Integer(modifier_amount.presence || 1)</code>
         </li>
@@ -340,8 +340,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="60000" data-linenumber="41">
-          <span class="hits">60000</span>
+        <li class="covered" data-hits="60018" data-linenumber="41">
+          <span class="hits">60018</span>
           
           <code class="ruby">          case modifier</code>
         </li>
@@ -352,8 +352,8 @@
           <code class="ruby">          when &#39;dl&#39; # Drop lowest N</code>
         </li>
       
-        <li class="covered" data-hits="50000" data-linenumber="43">
-          <span class="hits">50000</span>
+        <li class="covered" data-hits="50015" data-linenumber="43">
+          <span class="hits">50015</span>
           
           <code class="ruby">            modifier_amount.times { results.shift }</code>
         </li>
@@ -364,8 +364,8 @@
           <code class="ruby">          when &#39;dh&#39; # Drop highest N</code>
         </li>
       
-        <li class="covered" data-hits="50000" data-linenumber="45">
-          <span class="hits">50000</span>
+        <li class="covered" data-hits="50015" data-linenumber="45">
+          <span class="hits">50015</span>
           
           <code class="ruby">            modifier_amount.times { results.pop }</code>
         </li>
@@ -376,8 +376,8 @@
           <code class="ruby">          when &#39;l&#39; # Pick lowest</code>
         </li>
       
-        <li class="covered" data-hits="10000" data-linenumber="47">
-          <span class="hits">10000</span>
+        <li class="covered" data-hits="10003" data-linenumber="47">
+          <span class="hits">10003</span>
           
           <code class="ruby">            results = [results.first]</code>
         </li>
@@ -388,8 +388,8 @@
           <code class="ruby">          when &#39;h&#39; # Pick highest</code>
         </li>
       
-        <li class="covered" data-hits="10000" data-linenumber="49">
-          <span class="hits">10000</span>
+        <li class="covered" data-hits="10003" data-linenumber="49">
+          <span class="hits">10003</span>
           
           <code class="ruby">            results = [results.last]</code>
         </li>
@@ -430,20 +430,20 @@
           <code class="ruby">        # Sum dice results and reinsert the results in the original string</code>
         </li>
       
-        <li class="covered" data-hits="140000" data-linenumber="56">
-          <span class="hits">140000</span>
+        <li class="covered" data-hits="140042" data-linenumber="56">
+          <span class="hits">140042</span>
           
           <code class="ruby">        result = results.inject(0) { |sum, x| sum + x }</code>
         </li>
       
-        <li class="covered" data-hits="60000" data-linenumber="57">
-          <span class="hits">60000</span>
+        <li class="covered" data-hits="60018" data-linenumber="57">
+          <span class="hits">60018</span>
           
           <code class="ruby">        @rolls &lt;&lt; result</code>
         </li>
       
-        <li class="covered" data-hits="60000" data-linenumber="58">
-          <span class="hits">60000</span>
+        <li class="covered" data-hits="60018" data-linenumber="58">
+          <span class="hits">60018</span>
           
           <code class="ruby">        str.gsub!(group, result.to_s)</code>
         </li>
@@ -460,8 +460,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="10000" data-linenumber="61">
-          <span class="hits">10000</span>
+        <li class="covered" data-hits="10003" data-linenumber="61">
+          <span class="hits">10003</span>
           
           <code class="ruby">      str</code>
         </li>
@@ -520,20 +520,20 @@
           <code class="ruby">RSpec.describe Dice do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="5">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="4" data-linenumber="5">
+          <span class="hits">4</span>
           
           <code class="ruby">  let(:dice) { Dice.new(str) }</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="6">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="5" data-linenumber="6">
+          <span class="hits">5</span>
           
           <code class="ruby">  let(:str) { &#39;3d6dl2 + 3d6dh2 + 3d6dl + 3d6dh + 3d6l + 3d6h + 2&#39;}</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="7">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="7">
+          <span class="hits">3</span>
           
           <code class="ruby">  subject { dice.result }</code>
         </li>
@@ -544,14 +544,14 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="9">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="9">
+          <span class="hits">2</span>
           
           <code class="ruby">  it { is_expected.to be_a Integer }</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="10">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="10">
+          <span class="hits">2</span>
           
           <code class="ruby">  it { is_expected.to be &lt;= 50 } # Max value of expression</code>
         </li>
@@ -565,7 +565,7 @@
         <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
-          <code class="ruby">  it &#39;should be fast&#39; do</code>
+          <code class="ruby">  it &#39;can handle 5000 roll per second&#39; do</code>
         </li>
       
         <li class="covered" data-hits="10002" data-linenumber="13">
@@ -598,14 +598,14 @@
           <code class="ruby">  describe &#39;#raw_expression&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="18">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="18">
+          <span class="hits">2</span>
           
           <code class="ruby">    subject { dice.raw_expression }</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="19">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="19">
+          <span class="hits">2</span>
           
           <code class="ruby">    it { is_expected.to eql(str) }</code>
         </li>
