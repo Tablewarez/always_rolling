@@ -31,7 +31,7 @@ class Dice
       # Match groups of dices, calculate the groups and reinsert them
       dice_groups(str).each do |group|
         # Roll each dice
-        dices, sides, modifier, modifier_amount = group.scan(/(\d+)d(\d+)(\D+)(\d*)/).flatten
+        dices, sides, modifier, modifier_amount = group.scan(/(\d+)d(\d+)(\D*)(\d*)/).flatten
         results = Integer(dices).times.collect { rand(Integer(sides)) + 1 }.sort
 
         # If a modifier is present, handle that
