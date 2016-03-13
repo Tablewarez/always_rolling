@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'dice-roller'
-  s.version     = '0.0.1'
+  s.version     = '0.0.2'
   s.date        = '2016-03-16'
   s.summary     = "A ruby dice roller"
   s.description = "A clean way to roll complex dice structures"
