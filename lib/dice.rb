@@ -34,7 +34,7 @@ class Dice
         dices, sides, modifier, modifier_amount = group.scan(/(\d+)d(\d+)(\D*)(\d*)/).flatten
         results = Integer(dices).times.collect do
           r = rand(Integer(sides)) + 1
-          @rolls << r
+          @rolls << "D#{sides}: #{r}"
           r
         end.sort
 
